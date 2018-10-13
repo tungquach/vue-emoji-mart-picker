@@ -1,0 +1,92 @@
+@import '~assets/scss/base/common';
+
+.emojipicker {
+  &.bottom {
+    .emoji-mart {
+      top: 32px;
+      right: -11px;
+    }
+  }
+
+  
+  &.top {
+    .emoji-mart {
+      bottom: 32px;
+      right: -11px;
+    }
+  }
+
+  &.right {
+    .emoji-mart {
+      top: -11px;
+      left: 33px;
+    }
+  }
+}
+
+.emoji-mart {
+  position: absolute;
+  z-index: 99;
+
+  .emoji-mart-category-label {
+    span {
+      margin: 0;
+      padding: 4px 6px;
+    }
+  }
+
+  .emoji-mart-category {
+    .emoji-mart-emoji {
+      cursor: pointer;
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .emoji-mart-bar {
+    .emoji-mart-anchor {
+      padding: 12px 0 8px;
+      cursor: pointer;
+  
+      svg {
+        fill: #929AAA;
+        width: 16px;
+        height: 16px;
+      }
+
+      .emoji-mart-anchor-bar {
+        background-color: $primaryColor !important;
+      }
+    }
+    .emoji-mart-anchor-selected {
+      svg {
+        fill: $primaryColor;
+      }
+
+      .emoji-mart-anchor-bar {
+        bottom: 0;
+        background-color: $primaryColor !important;
+      }
+    }
+  }
+  
+  .emoji-mart-scroll {
+    /* width */
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+  
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #fff;
+      border-radius: 10px;
+    }
+  
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #C1CADB;
+    }
+  }
+}

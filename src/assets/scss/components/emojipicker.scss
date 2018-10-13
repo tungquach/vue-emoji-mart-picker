@@ -1,0 +1,38 @@
+@import '~assets/scss/base/common';
+
+// transition SASS mixins
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
+.icon {
+  cursor: pointer;
+  
+  &.smiley-loading, &.close-loading {
+    animation: rotation 0.6s infinite linear 0.25s;
+    cursor: default;
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  @include transition(all .3s ease);
+}
+
+.fade-enter, .fade-leave-to {
+  height: 0;
+  opacity: 0;
+}
+
+@keyframes rotation {
+  from {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(359deg);
+  }
+}

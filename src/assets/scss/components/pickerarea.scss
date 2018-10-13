@@ -1,0 +1,59 @@
+@import '~assets/scss/base/common';
+
+.emojipicker {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  &.emojipicker-inline {
+    .emojipicker-area {
+      min-height: 20px;
+    }
+  }
+
+  .emojipicker-button {
+    position: absolute;
+    right: 11px;
+    bottom: 11px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .emojipicker-area {
+    padding: 8px 12px;
+    height: auto;
+    min-height: 8em;
+    max-height: 15em;
+    overflow: auto;
+    outline: 0;
+    border: 1px solid #E1E9F8;
+    border-radius: 3px;
+
+    &:active,
+    &:focus {
+      border: 1px solid $primaryColor;
+    }
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    /* track */
+    &::-webkit-scrollbar-track {
+      background: #fff;
+      border-radius: 10px;
+    }
+
+    /* handle */
+    &::-webkit-scrollbar-thumb {
+      background: #C1CADB;
+    }
+
+    &:empty:before {
+      content: attr(placeholder);
+      display: block;
+      color: #BBB;
+    }
+  }
+}
