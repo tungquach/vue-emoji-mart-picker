@@ -1,6 +1,6 @@
 {
   "name": "vue-emoji-mart-picker",
-  "description": "A Vue.js project",
+  "description": "Vue Emoji Mart Picker is a simple WYSIWYG editor component with emoji picker for VueJS",
   "version": "1.0.0",
   "author": "tungquach257@gmail.com",
   "license": "BSD-3-Clause",
