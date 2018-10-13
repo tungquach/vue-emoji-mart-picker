@@ -26,6 +26,7 @@
         :exclude="exclude"
         :emoji-size="emojiSize"
         :per-line="perLine"
+        :i18n="i18n"
         :set="set"
         :sheet-size="sheetSize"
         :background-image-fn="backgroundImageFn"

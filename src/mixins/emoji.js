@@ -20,6 +20,10 @@ export default {
       type: Number,
       default: 9,
     },
+    i18n: {
+      type: Object,
+      default: {},
+    },
     set: {
       type: String,
       default: 'apple',
@@ -38,7 +42,7 @@ export default {
     },
     showCategories: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     showSkinTones: {
       type: Boolean,
