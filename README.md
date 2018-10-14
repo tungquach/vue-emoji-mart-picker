@@ -2,6 +2,8 @@
 
 <b>Vue Emoji Mart Picker</b> is a simple WYSIWYG editor component with emoji picker for VueJS that base on [jm-david/emoji-mart-vue](https://github.com/jm-david/emoji-mart-vue)
 
+<b><a href="https://tungquach.github.io/vue-emoji-mart-picker/">View Demo</a></b>
+
 ## Installation
 
 `npm install --save vue-emoji-mart-picker`
