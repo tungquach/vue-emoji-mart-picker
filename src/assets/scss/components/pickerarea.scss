@@ -1,13 +1,50 @@
 @import '~assets/scss/base/common';
 
+// Flexbox display
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// Flexbox Align Items
+// Values: flex-start | flex-end | center | baseline | stretch
+// Default: stretch
+
+@mixin align-items($value: stretch) {
+  @if $value == flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+  } @else if $value == flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -ms-flex-align: $value;
+  }
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  align-items: $value;
+}
+
 .emojipicker {
   position: relative;
   width: 100%;
   height: auto;
+  @include flexbox();
 
   &.emojipicker-inline {
+    @include align-items(center);
+
     .emojipicker-area {
       min-height: 20px;
+      white-space: nowrap;
+    }
+
+    .emojipicker-button {
+      bottom: auto;
     }
   }
 
@@ -21,6 +58,7 @@
 
   .emojipicker-area {
     padding: 8px 12px;
+    width: 100%;
     height: auto;
     min-height: 8em;
     max-height: 15em;
@@ -28,6 +66,7 @@
     outline: 0;
     border: 1px solid #E1E9F8;
     border-radius: 3px;
+    background: #ffffff;
 
     &:active,
     &:focus {

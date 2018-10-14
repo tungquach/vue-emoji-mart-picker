@@ -2,14 +2,11 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './docs/demo.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'index.js',
-    library: 'vue-emoji-mart-picker',
-    libraryTarget: 'umd',
-    umdNamedDefine: true,
+    filename: 'demo.js',
   },
   module: {
     rules: [
@@ -75,13 +72,14 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': path.join(__dirname, 'src'),
-      'assets': path.join(__dirname, 'src/assets'),
+      '@': path.join(__dirname, '../src'),
+      'assets': path.join(__dirname, '../src/assets'),
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
   devServer: {
     historyApiFallback: true,
+    contentBase: __dirname,
     compress: true,
     noInfo: true,
     overlay: true

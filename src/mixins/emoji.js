@@ -5,12 +5,12 @@ export default {
       default: 'point_up',
     },
     include: {
-      type: Object,
-      default: [],
+      type: Array,
+      default: () => [],
     },
     exclude: {
-      type: Object,
-      default: [],
+      type: Array,
+      default: () => [],
     },
     emojiSize: {
       type: Number,
@@ -22,7 +22,7 @@ export default {
     },
     i18n: {
       type: Object,
-      default: {},
+      default: () => {},
     },
     set: {
       type: String,

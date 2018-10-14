@@ -5,13 +5,13 @@
     <a @click="tooglePicker()">
       <img
         v-show="!showPicker"
-        :class="{'smiley-loading': isSmileyLoading}"
-        class="icon icon-smiley"
+        :class="{'emojipicker-smiley-loading': isSmileyLoading}"
+        class="emojipicker-icon emojipicker-icon-smiley"
         src="~assets/images/icons/smiley.svg">
       <img
         v-show="showPicker"
-        :class="{'close-loading': isCloseLoading}"
-        class="icon icon-close"
+        :class="{'emojipicker-close-loading': isCloseLoading}"
+        class="emojipicker-icon emojipicker-icon-close"
         src="~assets/images/icons/close.svg">
     </a>
     <!-- picker toggle button end -->

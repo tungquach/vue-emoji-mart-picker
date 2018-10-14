@@ -4,11 +4,19 @@
   "version": "1.0.0",
   "author": "tungquach257@gmail.com",
   "license": "BSD-3-Clause",
-  "keywords": [],
+  "keywords": [
+    "vue",
+    "emoji",
+    "mart",
+    "picker",
+    "wysiwyg"
+  ],
   "main": "dist/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "dev:docs": "cross-env NODE_ENV=development webpack-dev-server --open --hot --config docs/webpack.config.js",
+    "build:docs": "cross-env NODE_ENV=production webpack --progress --hide-modules --config docs/webpack.config.js"
   },
   "dependencies": {
     "emoji-mart-vue": "^2.6.4",

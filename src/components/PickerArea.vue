@@ -14,6 +14,7 @@
       autocorrect="off"
       autocapitalize="off"
       @click="click"
+      @keydown.enter="enter"
       @input="update"></div>
     <!-- edit content area end -->
 
@@ -113,6 +114,16 @@
        */
       click() {
         this.selection = textUtil.saveSelection()
+      },
+
+      /**
+       * on press enter
+       * prevent new line on inline mode
+       */
+      enter(event) {
+        if (this.inline) {
+          event.preventDefault()
+        }
       },
 
       /**
