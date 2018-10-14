@@ -2,7 +2,7 @@
 
 <b>Vue Emoji Mart Picker</b> is a simple WYSIWYG editor component with emoji picker for VueJS that base on [jm-david/emoji-mart-vue](https://github.com/jm-david/emoji-mart-vue)
 
-<b><a href="https://tungquach.github.io/vue-emoji-mart-picker/">View Demo</a></b>
+<b><a target="_blank" href="https://tungquach.github.io/vue-emoji-mart-picker/">View Demo</a></b>
 
 ## Installation
 
@@ -66,7 +66,7 @@ Sheets are served from [jsdelivr](https://cdn.jsdelivr.net).
 | emojione  | 315 KB                 | 435 KB                 | 1020 KB                | 2.33 MB                |
 | facebook  | 322 KB                 | 439 KB                 | 1020 KB                | 2.50 MB                |
 | google    | 301 KB                 | 409 KB                 |  907 KB                | 2.17 MB                |
-| messenger | 325 KB                 | 449 MB                 | 1.05 MB                | 2.69 MB                |
+| messenger | 325 KB                 | 449 KB                 | 1.05 MB                | 2.69 MB                |
 | twitter   | 288 KB                 | 389 KB                 |  839 KB                | 1.82 MB                |
 
 
