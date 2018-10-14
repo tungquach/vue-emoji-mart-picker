@@ -8,21 +8,24 @@
 
 `npm install --save vue-emoji-mart-picker`
 
-## Components
+## Usage
 ```js
 import PickerArea from 'vue-emoji-mart-picker'
 ```
 
 ```html
-<picker-area set="messenger" />
-<picker-area v-model="myValue" />
+<picker-area v-model="myValue" set="messenger" />
+<picker-area v-model="myOtherValue" :inline="true" />
 <picker-area title="Pick your emoji…" emoji="point_up" />
 <picker-area :i18n="{ search: 'Recherche', categories: { search: 'Résultats de recherche', recent: 'Récents' } }" />
 ```
 
 | Prop | Required | Default | Description |
 | ---- | :------: | ------- | ----------- |
-| **emoji** | | `department_store` | The emoji shown when no emojis are hovered, set to an empty string to show nothing |
+| **inline** | | `false` | Display editor as single line input |
+| **pickerPosition** | | `bottom` | The position of the emoji picker |
+| **placeholder** | | `""` | The placeholder of the editor |
+| **emoji** | | `point_up` | The emoji shown when no emojis are hovered, set to an empty string to show nothing |
 | **include** | | `[]` | Only load included categories. Accepts [I18n categories keys](#i18n). Order will be respected, except for the `recent` category which will always be the first. |
 | **exclude** | | `[]` | Don't load excluded categories. Accepts [I18n categories keys](#i18n). |
 | **emojiSize** | | `24` | The emoji width and height |
@@ -35,7 +38,7 @@ import PickerArea from 'vue-emoji-mart-picker'
 | **showCategories** | | `true` | Display categories |
 | **showSkinTones** | | `true` | Display skin tones picker |
 | **emojiTooltip** | | `false` | Show emojis short name when hovering (title) |
-| **title** | | `Emoji Mart™` | The title shown when no emojis are hovered |
+| **title** | | `Pick your emoji...` | The title shown when no emojis are hovered |
 | **infiniteScroll** | | `true` | Scroll continuously through the categories |
 
 #### I18n
