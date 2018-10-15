@@ -1,5 +1,9 @@
 # vue-emoji-mart-picker
 
+[![npm](https://img.shields.io/npm/v/vue-emoji-mart-picker.svg?style=flat-square)](https://www.npmjs.com/package/vue-emoji-mart-picker) ![npm](https://img.shields.io/npm/dt/vue-emoji-mart-picker.svg)
+
+
+
 <b>Vue Emoji Mart Picker</b> is a simple WYSIWYG editor component with emoji picker for VueJS that base on [jm-david/emoji-mart-vue](https://github.com/jm-david/emoji-mart-vue)
 
 <b>[View Demo](https://tungquach.github.io/vue-emoji-mart-picker/)</b>
