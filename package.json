@@ -31,6 +31,9 @@
     "vue": "^2.5.11",
     "vue-clickaway": "^2.2.2"
   },
+  "peerDependencies": {
+    "vue": "^2.0.0"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
