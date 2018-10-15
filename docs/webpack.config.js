@@ -4,8 +4,8 @@ var webpack = require('webpack')
 module.exports = {
   entry: './docs/demo.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'demo.js',
+    path: path.resolve(__dirname, '.'),
+    filename: 'demo.build.js',
   },
   module: {
     rules: [
@@ -78,7 +78,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: __dirname,
+    contentBase: path.join(__dirname, "."),
     compress: true,
     noInfo: true,
     overlay: true
