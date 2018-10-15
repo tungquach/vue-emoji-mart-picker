@@ -4,6 +4,14 @@
   "version": "1.0.0",
   "author": "tungquach257@gmail.com",
   "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tungquach/vue-emoji-mart-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tungquach/vue-emoji-mart-picker/issues"
+  },
+  "homepage": "https://github.com/tungquach/vue-emoji-mart-picker",
   "keywords": [
     "vue",
     "emoji",
