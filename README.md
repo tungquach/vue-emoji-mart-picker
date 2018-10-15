@@ -1,6 +1,6 @@
 # vue-emoji-mart-picker
 
-[![npm](https://img.shields.io/npm/v/vue-emoji-mart-picker.svg?style=flat-square)](https://www.npmjs.com/package/vue-emoji-mart-picker) ![npm](https://img.shields.io/npm/dt/vue-emoji-mart-picker.svg)
+[![npm](https://img.shields.io/npm/v/vue-emoji-mart-picker.svg?style=flat-square)](https://www.npmjs.com/package/vue-emoji-mart-picker) [![npm](https://img.shields.io/npm/dt/vue-emoji-mart-picker.svg)](https://www.npmjs.com/package/vue-emoji-mart-picker)
 
 
 
