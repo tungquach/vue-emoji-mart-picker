@@ -55,24 +55,36 @@ export default {
    * insert text at last cursor
    */
   insertTextAtCursor(text) {
-    var sel, range
+    var sel, range;
     if (window.getSelection) {
-      sel = window.getSelection()
-      if (sel.getRangeAt && sel.rangeCount) {
-        range = sel.getRangeAt(0)
-        range.deleteContents()
-        var textNode = document.createTextNode(text)
-        range.insertNode(textNode)
-        sel.removeAllRanges()
-        range = range.cloneRange()
-        range.selectNode(textNode)
-        range.collapse(false)
-        sel.addRange(range)
-      }
-    } else if (document.selection && document.selection.createRange) {
-      range = document.selection.createRange()
-      range.pasteHTML(text)
-      range.select()
+        // IE9 and non-IE
+        sel = window.getSelection();
+        if (sel.getRangeAt && sel.rangeCount) {
+            range = sel.getRangeAt(0);
+            range.deleteContents();
+
+            // Range.createContextualFragment() would be useful here but is
+            // non-standard and not supported in all browsers (IE9, for one)
+            var el = document.createElement("div");
+            el.innerHTML = text;
+            var frag = document.createDocumentFragment(), node, lastNode;
+            while ( (node = el.firstChild) ) {
+                lastNode = frag.appendChild(node);
+            }
+            range.insertNode(frag);
+            
+            // Preserve the selection
+            if (lastNode) {
+                range = range.cloneRange();
+                range.setStartAfter(lastNode);
+                range.collapse(true);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+        }
+    } else if (document.selection && document.selection.type != "Control") {
+        // IE < 9
+        document.selection.createRange().pasteHTML(text);
     }
   },
 }

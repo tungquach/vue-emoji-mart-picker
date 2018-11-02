@@ -48,6 +48,7 @@
   import EmojiPicker from '@/components/EmojiPicker'
   import textUtil from '@/utils/text'
   import emojiMixin from '@/mixins/emoji'
+  import emojiUtil from '@/utils/emoji'
 
   export default {
     components: {
@@ -80,13 +81,14 @@
     },
     watch: {
       value(value) {
-        if (this.$refs.textArea.innerText !== value) {
-          this.$refs.textArea.innerText = this.value
+        value = emojiUtil.convertEmoji(value)
+        if (this.$refs.textArea.innerHTML !== value) {
+          this.$refs.textArea.innerHTML = emojiUtil.convertEmoji(this.value)
         }
       },
     },
     mounted() {
-      this.$refs.textArea.innerText = this.value
+      this.$refs.textArea.innerHTML = emojiUtil.convertEmoji(this.value)
     },
     methods: {
       /**
@@ -98,7 +100,7 @@
         }
 
         textUtil.restoreSelection(this.selection)
-        textUtil.insertTextAtCursor(emoji.native)
+        textUtil.insertTextAtCursor(emojiUtil.convertEmoji(emoji.native))
         this.update()
       },
 
@@ -131,7 +133,7 @@
        */
       update() {
         this.selection = textUtil.saveSelection()
-        this.$emit('input', this.$refs.textArea.innerText)
+        this.$emit('input', emojiUtil.convertEmojiStr(this.$refs.textArea.innerHTML))
       },
     },
   }
@@ -140,3 +142,14 @@
 <style lang="scss" scoped>
   @import "~assets/scss/components/pickerarea";
 </style>
+
+<style>
+  .emoji.emoji-sizer {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    background-size: cover;
+  }
+</style>
+
