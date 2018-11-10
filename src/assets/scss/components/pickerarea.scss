@@ -68,6 +68,8 @@
     border-radius: 3px;
     background: #ffffff;
     text-align: initial;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 
     &:active,
     &:focus {

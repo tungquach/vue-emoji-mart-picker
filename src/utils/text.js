@@ -1,4 +1,18 @@
 export default {
+  tempDiv: null,
+
+  /**
+   * strip html
+   * @param {*} html 
+   */
+  stripHtml(html) {
+    if (!this.tempDiv) {
+      this.tempDiv = document.createElement('div')
+    }
+    this.tempDiv.innerHTML = html
+    return this.tempDiv.textContent || this.tempDiv.innerText || ''
+  },
+
   /**
    * save caret selection
    */

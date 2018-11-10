@@ -15,6 +15,7 @@
       autocapitalize="off"
       @click="click"
       @keydown.enter="enter"
+      @paste.prevent="onPaste"
       @input="update"></div>
     <!-- edit content area end -->
 
@@ -91,6 +92,16 @@
       this.$refs.textArea.innerHTML = emojiUtil.convertEmoji(this.value)
     },
     methods: {
+      /**
+       * listen paste event
+       */
+      onPaste(event) {
+        let text = event.clipboardData.getData('text/plain')
+        text = textUtil.stripHtml(text)
+        textUtil.insertTextAtCursor(text)
+        this.update()
+      },
+
       /**
        * on select emoji
        */
