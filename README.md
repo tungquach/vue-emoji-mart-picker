@@ -2,17 +2,16 @@
 
 [![npm](https://img.shields.io/npm/v/vue-emoji-mart-picker.svg?style=flat-square)](https://www.npmjs.com/package/vue-emoji-mart-picker) [![npm](https://img.shields.io/npm/dt/vue-emoji-mart-picker.svg)](https://www.npmjs.com/package/vue-emoji-mart-picker)
 
+**Vue Emoji Mart Picker** is a simple WYSIWYG editor component with emoji picker for VueJS that based on [jm-david/emoji-mart-vue](https://github.com/jm-david/emoji-mart-vue)
 
-
-<b>Vue Emoji Mart Picker</b> is a simple WYSIWYG editor component with emoji picker for VueJS that based on [jm-david/emoji-mart-vue](https://github.com/jm-david/emoji-mart-vue)
-
-<b>[View Demo](https://tungquach.github.io/vue-emoji-mart-picker/)</b>
+**[View Demo](https://tungquach.github.io/vue-emoji-mart-picker/)**
 
 ## Installation
 
 `npm install --save vue-emoji-mart-picker`
 
 ## Usage
+
 ```js
 import PickerArea from 'vue-emoji-mart-picker'
 ```
@@ -45,7 +44,8 @@ import PickerArea from 'vue-emoji-mart-picker'
 | **title** | | `Pick your emoji...` | The title shown when no emojis are hovered |
 | **infiniteScroll** | | `true` | Scroll continuously through the categories |
 
-#### I18n
+### I18n
+
 ```js
 search: 'Search',
 notfound: 'No Emoji Found',
@@ -65,6 +65,7 @@ categories: {
 ```
 
 #### Sheet sizes
+
 Sheets are served from [jsdelivr](https://cdn.jsdelivr.net).
 
 | Set       | Size (`sheetSize: 16`) | Size (`sheetSize: 20`) | Size (`sheetSize: 32`) | Size (`sheetSize: 64`) |
@@ -76,13 +77,14 @@ Sheets are served from [jsdelivr](https://cdn.jsdelivr.net).
 | messenger | 325 KB                 | 449 KB                 | 1.05 MB                | 2.69 MB                |
 | twitter   | 288 KB                 | 389 KB                 |  839 KB                | 1.82 MB                |
 
-
 ## Development
+
 ```bash
-$ npm install
-$ npm run dev
+npm install
+npm run dev
 ```
 
-## 🎩 Hat tips!
-Powered by [iamcal/emoji-data](https://github.com/iamcal/emoji-data) and inspired by [iamcal/js-emoji](https://github.com/iamcal/js-emoji).<br>
+## 🎩 Hat tips
+
+Powered by [iamcal/emoji-data](https://github.com/iamcal/emoji-data) and inspired by [iamcal/js-emoji](https://github.com/iamcal/js-emoji).\
 🙌🏼  [Cal Henderson](https://github.com/iamcal).
